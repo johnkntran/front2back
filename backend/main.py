@@ -1,3 +1,4 @@
 import time
 
-time.sleep(604800) # Sleep for a week
+print('** Sleeping for a week **')
+time.sleep(604800)

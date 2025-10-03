@@ -1,0 +1,1 @@
+- Run `uv sync`, then `uv run ruff check` and `uvx ty check main.py` to test if everything works.

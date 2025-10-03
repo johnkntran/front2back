@@ -3,7 +3,7 @@ version: '3'
 services:
 
   database:
-    container_name: front2back-db
+    container_name: f2b-db
     image: pgvector/pgvector:pg16
     restart: always
     environment:
@@ -19,7 +19,7 @@ services:
       - front2back
 
   cache:
-    container_name: front2back-cache
+    container_name: f2b-cache
     image: redis/redis-stack:7.4.0-v5
     restart: always
     volumes:
@@ -31,7 +31,7 @@ services:
       - front2back
 
   backend:
-    container_name: front2back-backend
+    container_name: f2b-back
     build:
       dockerfile: backend/Dockerfile
       context: .
@@ -55,7 +55,7 @@ services:
       - front2back
   
   frontend:
-    container_name: front2back-frontend
+    container_name: f2b-front
     build:
       dockerfile: frontend/Dockerfile
       context: .

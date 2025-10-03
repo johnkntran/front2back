@@ -1,0 +1,20 @@
+[project]
+name = "front2back"
+version = "0.0.0"
+description = "Some app description for front2back"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff>=0.13.3",
+    "ty>=0.0.1a21",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["E501"]
+

@@ -1,0 +1,89 @@
+version: '3'
+
+services:
+
+  database:
+    container_name: front2back-db
+    image: pgvector/pgvector:pg16
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./backend/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - front2back
+
+  cache:
+    container_name: front2back-cache
+    image: redis/redis-stack:7.4.0-v5
+    restart: always
+    volumes:
+      - cache:/data
+    ports:
+      - "6379:6379"
+      - "8001:8001"
+    networks:
+      - front2back
+
+  backend:
+    container_name: front2back-backend
+    build:
+      dockerfile: backend/Dockerfile
+      context: .
+      secrets:
+        - env
+    command: bash -c "python main.py"
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database
+      - cache
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONDEVMODE=1
+    env_file:
+      - .env
+    networks:
+      - front2back
+  
+  frontend:
+    container_name: front2back-frontend
+    build:
+      dockerfile: frontend/Dockerfile
+      context: .
+      secrets:
+        - env
+    command: bash -c "npm install && npm run dev"
+    volumes:
+      - ./frontend:/code
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    env_file:
+      - .env
+    networks:
+      - front2back
+
+networks:
+  front2back:
+    name: front2back-network
+
+volumes:
+  cache:
+    name: front2back-cache
+  database:
+    name: front2back-database
+
+secrets:
+  env:
+    file: .env
+

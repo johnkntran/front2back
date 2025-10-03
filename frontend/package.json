@@ -1,0 +1,11 @@
+{
+  "name": "front2back",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "sleep infinity"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
+

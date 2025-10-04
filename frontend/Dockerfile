@@ -1,4 +1,4 @@
-FROM node:22.18.0-bookworm-slim
+FROM node:22.20.0-bookworm-slim
 
 WORKDIR /code
 
@@ -19,7 +19,6 @@ RUN echo 'alias cc="claude --permission-mode acceptEdits --allowedTools Tool Bas
 RUN mkdir ~/.codex && echo 'preferred_auth_method = "apikey"' >> ~/.codex/config.toml
 
 COPY .env /code
-COPY ./frontend /code
 
 EXPOSE 3000
 

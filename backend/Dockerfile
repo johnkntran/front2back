@@ -1,4 +1,4 @@
-FROM python:3.12-slim-bookworm
+FROM python:3.13.7-slim-trixie
 
 WORKDIR /code
 
@@ -29,7 +29,6 @@ COPY ./backend/requirements.txt /code
 RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
 COPY .env /code
-COPY ./backend /code
 
 EXPOSE 8000
 

@@ -2,7 +2,7 @@ FROM node:22.20.0-trixie-slim
 
 WORKDIR /code
 
-RUN apt-get update \
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y --no-install-recommends git curl vim \
     && apt-get install -y --reinstall procps
 

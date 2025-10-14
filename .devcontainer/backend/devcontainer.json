@@ -1,9 +1,10 @@
 {
-  "name": "Front2Back",
-  "dockerComposeFile": ["../docker-compose.yml"],
+  "name": "Front2Back (Backend)",
+  "dockerComposeFile": ["../../docker-compose.yml"],
   "service": "backend",
   "workspaceFolder": "/code",
-  "forwardPorts": [8000, 3000],
+  "forwardPorts": [8000],
+  "shutdownAction": "none",
   "postCreateCommand": "git config --global user.name $GIT_USERNAME && git config --global user.email $GIT_EMAIL",
   "customizations": {
     "vscode": {

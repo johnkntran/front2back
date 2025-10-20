@@ -1,4 +1,7 @@
 import time
+import logging
 
-print('** Sleeping for a week **')
+logger = logging.getLogger(__name__)
+
+logger.warning('** Sleeping for a week **')
 time.sleep(604800)

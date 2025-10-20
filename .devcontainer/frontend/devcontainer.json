@@ -5,7 +5,8 @@
   "workspaceFolder": "/code",
   "forwardPorts": [3000],
   "shutdownAction": "none",
-  "postCreateCommand": "git config --global user.name $GIT_USERNAME && git config --global user.email $GIT_EMAIL",
+  "onCreateCommand": "git config --global user.name $GIT_USERNAME && git config --global user.email $GIT_EMAIL",
+  "postCreateCommand": "printenv",
   "customizations": {
     "vscode": {
       "extensions": [

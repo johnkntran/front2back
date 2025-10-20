@@ -37,9 +37,12 @@ services:
       context: .
       secrets:
         - env
-    command: bash -c "python main.py"
+    command: bash -c "
+      uv tool update-shell && 
+      python main.py"
     volumes:
       - ./backend:/code
+      - ./.env:/code/.env # For Aider
     ports:
       - "8000:8000"
     depends_on:

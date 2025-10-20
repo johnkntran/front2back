@@ -1,4 +1,4 @@
-FROM python:3.13.7-slim-trixie
+FROM python:3.12-slim-bookworm
 
 WORKDIR /code
 
@@ -27,6 +27,7 @@ RUN mkdir ~/.codex && echo 'preferred_auth_method = "apikey"' >> ~/.codex/config
 
 COPY ./backend/requirements.txt /code
 RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+RUN uv tool install --force --python python3.12 --with pip aider-chat@latest
 
 COPY .env /code
 

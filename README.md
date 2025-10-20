@@ -26,18 +26,18 @@ To switch between backend and frontend applications, open the Command Palette ag
 
 ## Using the LLMs
 
-### Aider
+### [Aider](https://aider.chat/docs/usage.html)
 
 - Run `aider --model=claude-sonnet-4-5` or `aider --model=gpt-5` to configure Aider.
 - Run `aider <file1> <file2> <etc...>` to start using Aider.
 - Use `CTRL + C` twice to quit.
 
-### Claude Code
+### [Claude Code](https://www.anthropic.com/engineering/claude-code-best-practices)
 
 - Run `cc "<question>"` to use Claude Code.
 - Quits automatically after each statement.
 
-### Codex
+### [Codex](https://developers.openai.com/codex/cli)
 
 - Run `codex "<question>"` to use.
 - Use `CTRL + C` to quit.
@@ -45,3 +45,5 @@ To switch between backend and frontend applications, open the Command Palette ag
 ## Agentic IDEs
 
 I personally find myself using [Windsurf](https://docs.windsurf.com/windsurf/getting-started) or [Void](https://voideditor.com/) as my primary IDE, with [VS Code](https://code.visualstudio.com/docs) as a fallback to run [Dev Containers](https://containers.dev/implementors/json_reference/). I've heard good things about [Zed](https://zed.dev/docs/) (by the same guy who created [Atom](https://github.blog/news-insights/product-news/sunsetting-atom/)) but haven't used it. There's also [Trae](https://traeide.com/docs/what-is-trae-ide), created by ByteDance (who makes TikTok) that I don't know much about. Lastly, there's [Kiro](kiro.dev/docs/) which might be promising.
+
+Some other mentions are [Warp](https://docs.warp.dev/code/code-editor), [Amp](https://sourcegraph.com/amp), [OpenCode](https://opencode.ai/docs), [Factory](https://factory.ai/pricing), [Tabnine](https://docs.tabnine.com/main), [AugmentCode](https://docs.augmentcode.com/introduction), many others.

@@ -24,7 +24,7 @@ Then open the Command Palette by typing `Command + P` on Mac (`Control + P` on W
 
 To switch between backend and frontend applications, open the Command Palette again and type `> Dev Containers: Switch Container` to switch to the other container.
 
-## Using the LLMs
+## Using The LLM CLI Tools
 
 ### [Aider](https://aider.chat/docs/usage.html)
 

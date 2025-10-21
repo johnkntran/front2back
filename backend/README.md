@@ -10,3 +10,5 @@ For task queues and background worker libraries, my recommendations from most to
 - [Dramatiq](https://dramatiq.io/)
 - [Huey](https://huey.readthedocs.io/en/latest/)
 - [Kew](https://github.com/justrach/kew)
+
+For LLMs, I might suggest [Pydantic AI](https://ai.pydantic.dev).

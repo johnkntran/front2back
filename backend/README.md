@@ -17,4 +17,4 @@ For LLM Frameworks, I might suggest:
 - [Agno](https://docs.agno.com/introduction)
 - [Haystack](https://haystack.deepset.ai/)
 - [LangChain](https://docs.langchain.com/oss/python/langgraph/overview) / [LangGraph](https://langchain-ai.github.io/langgraph/)
-- [LlamaIndex](https://developers.llamaindex.ai/python/framework/#getting-started).
+- [LlamaIndex](https://developers.llamaindex.ai/python/framework/#getting-started)

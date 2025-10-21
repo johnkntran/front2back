@@ -3,5 +3,5 @@ This is a minimal Node.js container that lets you choose your frontend adventure
 - [Nuxt.js](https://nuxt.com/docs/4.x/getting-started/installation): `npm create nuxt@latest front2back`
 - [Next.js](https://nextjs.org/docs/app/getting-started/installation): `npx create-next-app@latest`
 - [React Router](https://reactrouter.com/start/framework/installation): `npx create-react-router@latest front2back`
-- [Svelte](https://svelte.dev/docs)
-- [Alpine](https://alpinejs.dev/)
+- [Svelte](https://svelte.dev/docs): `npx sv create .`
+- [Alpine](https://alpinejs.dev/): `npm install alpinejs`

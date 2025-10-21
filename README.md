@@ -28,7 +28,7 @@ To switch between backend and frontend applications, open the Command Palette ag
 
 ### [Aider](https://aider.chat/docs/usage.html)
 
-- Run `aider --model=claude-sonnet-4-5` or `aider --model=gpt-5` to configure Aider.
+- Run `aider --model=claude-sonnet-4-5`, `aider --model=gpt-5`, `aider --model=gemini-2.5-pro`, `aider --model=xai/grok-4-0709` or `aider --model=perplexity/sonar-reasoning` to configure Aider.
 - Run `aider <file1> <file2> <etc...>` to start using Aider.
 - Use `CTRL + C` twice to quit.
 

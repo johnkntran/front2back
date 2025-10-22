@@ -125,7 +125,7 @@ Based on my analysis of the front2back starter template, I can see it's a minima
 
 ### **Security Hardening**
 - **Environment variable validation**
-- **Secret management** with Docker secrets
+- **Secret management** with Docker secrets w/ Swarm
 - **SSL/TLS configuration** for local development
 - **Security headers** middleware
 - **SQL injection prevention** examples

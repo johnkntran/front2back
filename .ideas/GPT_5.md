@@ -52,11 +52,11 @@ Below are pragmatic feature ideas that align with your YAGNI/Occam’s Razor pre
 
 - **[openapi + typed client]**  
   Expose OpenAPI from FastAPI and generate a typed client for the frontend:
-  - Generate TS client during `frontend` build or a `make client` step with `openapi-typescript` or `orval`.
+  - Generate TS client during `frontend` build or a `make client` step with [OpenAPI TypeScript](https://openapi-ts.dev/) or [Orval](https://orval.dev/).
   - Keep it optional and light.
 
 - **[compose profiles]**  
-  Add profiles in `docker-compose.yml`:
+  Add [profiles](https://docs.docker.com/compose/how-tos/profiles/) in `docker-compose.yml`:
   - `dev` (default), `test`, `obs` (observability), `prod`.
   - Let `obs` spin up Jaeger/OTel Collector and Prometheus/Grafana only when needed.
 
@@ -79,7 +79,7 @@ Below are pragmatic feature ideas that align with your YAGNI/Occam’s Razor pre
 
 - **[background jobs (lightweight)]**  
   Introduce a tiny async worker using Redis:
-  - Python `arq` fits well (async + Redis).
+  - Python [arq](https://arq-docs.helpmanual.io/) fits well (async + Redis) but is in maintenance mode.
   - Provide one example job and a scheduler tick.
 
 - **[task runner]**  

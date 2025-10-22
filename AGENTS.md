@@ -57,6 +57,17 @@ It would have been simpler to _not use_ a router at all and just register the st
 
 ```python
 # urls.py
+
+from stocks.api import api
+
+urlpatterns = [
+    path('api/', api.urls),
+]
+```
+
+```python
+stocks/api.py
+
 from ninja import NinjaAPI
 
 api = NinjaAPI()
@@ -68,10 +79,6 @@ async def stock_list(request):
 @api.get("/stocks/{symbol}/prices", response=dict)
 async def historical_prices(request, symbol: str, period: str):
     ...
-
-urlpatterns = [
-    path('api/', api.urls),
-]
 ```
 
 Try to follow the principle of Don't repeat yourself (DRY) when possible.

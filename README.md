@@ -42,8 +42,12 @@ To switch between backend and frontend applications, open the Command Palette ag
 - Run `codex "<question>"` to use.
 - Use `CTRL + C` to quit.
 
-## Agentic IDEs
+### [Gemini CLI](https://geminicli.com/docs/)
+- Run `gemini` to use. Authenticate using the `2. Use Gemini API key` option.
+- Use `CTRL + C` to quit.
 
-I personally find myself using [Windsurf](https://docs.windsurf.com/windsurf/getting-started) or [Void](https://voideditor.com/) as my primary IDE, with [VS Code](https://code.visualstudio.com/docs) as a fallback to run [Dev Containers](https://containers.dev/implementors/json_reference/). I've heard good things about [Zed](https://zed.dev/docs/) (by the same guy who created [Atom](https://github.blog/news-insights/product-news/sunsetting-atom/)) but haven't used it. There's also [Trae](https://traeide.com/docs/what-is-trae-ide), created by ByteDance (who makes TikTok) that I don't know much about. Lastly, there's [Kiro](kiro.dev/docs/) which might be promising.
+## Agentic IDEs and CLIs
 
-Some other mentions are [Warp](https://docs.warp.dev/code/code-editor), [Amp](https://sourcegraph.com/amp), [OpenCode](https://opencode.ai/docs), [Factory](https://factory.ai/pricing), [Tabnine](https://docs.tabnine.com/main), [AugmentCode](https://docs.augmentcode.com/introduction), [Continue](https://docs.continue.dev/), [Forge Code](https://forgecode.dev/) , [Gemini CLI](https://geminicli.com/docs), [Jules](https://jules.google/), [Goose](https://block.github.io/goose/docs/guides/cli-providers/), and many others.
+I personally find myself using [Windsurf](https://docs.windsurf.com/windsurf/getting-started) or [Void](https://voideditor.com/) as my primary IDE, with [VS Code](https://code.visualstudio.com/docs) as a fallback to run [Dev Containers](https://containers.dev/implementors/json_reference/). I've heard good things about [Zed](https://zed.dev/docs/) (by the same guy who created [Atom](https://github.blog/news-insights/product-news/sunsetting-atom/)) but haven't used it. There's also [Trae](https://traeide.com/docs/what-is-trae-ide), created by ByteDance (who makes TikTok) that I don't know much about. There's [Kiro](kiro.dev/docs/) which might be promising, and [Jules](https://jules.google/) looks incredible!
+
+Some other mentions are [Warp](https://docs.warp.dev/code/code-editor), [Amp](https://sourcegraph.com/amp), [OpenCode](https://opencode.ai/docs), [Factory](https://factory.ai/pricing), [Tabnine](https://docs.tabnine.com/main), [AugmentCode](https://docs.augmentcode.com/introduction), [Continue](https://docs.continue.dev/), [Forge Code](https://forgecode.dev/), [Goose](https://block.github.io/goose/docs/guides/cli-providers/), and many others.

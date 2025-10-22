@@ -8,7 +8,7 @@ If you need a database for persistence, prefer using the `pgvector/pgvector:pg18
 
 If you need a caching layer, prefer using the `redis/redis-stack:7.4.0-v7` image.
 
-For the workspace directory, prefer using `/app`.
+For the workspace directory, prefer using `/code`.
 
 Configure a Dev Container when scaffolding the Docker setup so the project can be launched with VS Code.
 

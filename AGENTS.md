@@ -53,7 +53,7 @@ async def historical_prices(request, symbol: str, period: str):
 ```
 
 In this example, the `stocks_router` is the only router that is declared and registered to the `api`.
-It would have been simpler to _not use_ a router at all and just register the stock endpoints directly onto the `api`:
+It would have been simpler to _not use_ a router at all and just register the stock endpoints directly onto the `api` since the router is an unnecessary abstraction in this case:
 
 ```python
 # urls.py

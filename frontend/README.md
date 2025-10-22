@@ -4,5 +4,5 @@ This is a minimal Node.js container that lets you choose your frontend adventure
 - [React](https://react.dev/learn/build-a-react-app-from-scratch) + [Vite+](https://viteplus.dev/): `npm create vite@latest front2back -- --template react-ts`
 - [Next.js](https://nextjs.org/docs/app/getting-started/installation): `npx create-next-app@latest`
 - [React Router](https://reactrouter.com/start/framework/installation): `npx create-react-router@latest front2back`
-- [Svelte](https://svelte.dev/docs): `npx sv create feont2back`
+- [Svelte](https://svelte.dev/docs): `npx sv create front2back`
 - [Alpine](https://alpinejs.dev/): `npm install alpinejs`

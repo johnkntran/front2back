@@ -4,15 +4,15 @@ For Python applications, prefer the `python:3.12-slim-bookworm` image for the ba
 
 For JavaScript/TypeScript applications, prefer the `node:22.20.0-trixie-slim` image for the frontend.
 
-If you need a database for persistence, prefer using the `pgvector/pgvector:pg18-trixie` PostgreSQL image.
+If you need a database for persistence, prefer the `pgvector/pgvector:pg18-trixie` PostgreSQL image.
 
-If you need a caching layer, prefer using the `redis/redis-stack:7.4.0-v7` image.
+If you need a caching layer, prefer the `redis/redis-stack:7.4.0-v7` image.
 
 For the workspace directory, prefer using `/code`.
 
 Configure a Dev Container when scaffolding the Docker setup so the project can be launched with VS Code.
 
-If project requirements are already installed in the Dockerfile, you don't need to install them again in the Dev Container's `postCreateCommand`.
+If project requirements are already installed in the Dockerfile, you don't need to install them again in the Dev Container's `postCreateCommand`. Particularly, a statement like this in the `devcontainer.json` is unnecessary: `"postCreateCommand": "pip install --no-cache-dir -r backend/requirements.txt && cd frontend && npm install"`.
 
 # Coding Design
 
@@ -84,7 +84,7 @@ async def historical_prices(request, symbol: str, period: str):
 Try to follow the principle of Don't repeat yourself (DRY) when possible.
 
 Try to avoid Design Patterns (e.g. Singleton, Factory, etc.) unless you have a compelling reason to use one.
-Document your rationale if so and why the infraction is justified. Better yet, use a popular framework that handles such cases.
+Document your rationale if so and why that infraction is justified. Better yet, use a popular framework that handles such cases.
 For instance instead of implementing the Adapter pattern from scratch to interoperate with different LLM providers, just use LangChain or LlamaIndex.
 
 # Language-Specific Guidance
@@ -103,11 +103,11 @@ We don't need a lot of rules if you do decide to configure a linter or formatter
 
 Prefer creating a `/src` folder when using frameworks like Next.js or Nuxt.js.
 
-Always end JS/TS statements with semicolons.
+Always terminate JS/TS statements with semicolons.
 
 ## Python
 
-Prefer asynchronous solutions, libraries, etc. when possible instead of synchronous or multi-threaded solutions.
+Prefer asynchronous solutions and libraries when possible instead of synchronous or multi-threaded solutions.
 
 Prefer using an async database library such as `asyncpg` directly, over ORM libraries such as `sqlalchemy` and `alembic`.
 This is especially true if you were prompted to use a framework like FastAPI.
@@ -116,12 +116,11 @@ If you were prompted to use a framework like Django, then Django comes with an O
 Prefer using `httpx` as the async HTTP library, instead of `aiohttp` or `urllib.requests`.
 
 Prefer adding type hints to function signatures whenever possible.
-You don't need use `from typing import List, Dict, Optional` because
+You don't need use the obsolete `from typing import List, Dict, Optional` because
 type hinting with `list[SomeType]`, `dict[str, SomeType]`, and `SomeType | None`
-is already supported natively in recent versions of Python.
+are already supported natively in modern versions of Python.
 
-To initialize the database with tables, indices, and so on, use a database initialization script mounted directly to the Docker volume.
-For example:
+When you need to initialize the database with objects such as tables, indices, triggers, and so on, use a database initialization script mounted directly to the Docker volume. For example:
 
 ```yaml
 # docker-compose.yml
@@ -142,7 +141,7 @@ CREATE TABLE IF NOT EXISTS evaluations (
 );
 ```
 
-Don't initialize objects in the database with application code, such as:
+Don't initialize objects in the database using application code, such as:
 
 ```python
 import asyncpg

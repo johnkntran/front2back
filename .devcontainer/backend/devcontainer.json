@@ -14,7 +14,8 @@
         "charliermarsh.ruff",
         "ms-python.python",
         "anthropic.claude-code",
-        "openai.chatgpt"
+        "openai.chatgpt",
+        "google.gemini-cli-vscode-ide-companion"
       ],
       "settings": {}
     }

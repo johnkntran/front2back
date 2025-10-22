@@ -44,7 +44,7 @@ To switch between backend and frontend applications, open the Command Palette ag
 
 ### [Gemini CLI](https://geminicli.com/docs/)
 - Run `gemini` to use. Authenticate using the `2. Use Gemini API key` option.
-- Use `CTRL + C` to quit.
+- Use `CTRL + C` twice to quit.
 
 ## Agentic IDEs and CLIs
 

@@ -10,3 +10,11 @@ For task queues and background worker libraries, my recommendations from most to
 - [Dramatiq](https://dramatiq.io/)
 - [Huey](https://huey.readthedocs.io/en/latest/)
 - [Kew](https://github.com/justrach/kew)
+
+For LLM Frameworks, I might suggest:
+- [Pydantic AI](https://ai.pydantic.dev)
+- [LLM](https://github.com/simonw/llm)
+- [Agno](https://docs.agno.com/introduction)
+- [Haystack](https://haystack.deepset.ai/)
+- [LangChain](https://docs.langchain.com/oss/python/langgraph/overview) / [LangGraph](https://langchain-ai.github.io/langgraph/)
+- [LlamaIndex](https://developers.llamaindex.ai/python/framework/#getting-started)

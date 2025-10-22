@@ -66,7 +66,7 @@ urlpatterns = [
 ```
 
 ```python
-stocks/api.py
+# stocks/api.py
 
 from ninja import NinjaAPI
 

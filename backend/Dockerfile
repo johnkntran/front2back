@@ -3,7 +3,7 @@ FROM python:3.12-slim-bookworm
 WORKDIR /code
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git curl vim \
+    && apt-get install -y --no-install-recommends wget git curl vim \
     && apt-get install -y --reinstall procps
 
 RUN --mount=type=secret,id=env,target=/code/.env \
@@ -28,8 +28,7 @@ RUN mkdir ~/.codex && echo 'preferred_auth_method = "apikey"' >> ~/.codex/config
 COPY ./backend/requirements.txt /code
 RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
-COPY .env /code
-COPY ./backend /code
+COPY .env /code/.env
 
 EXPOSE 8000
 

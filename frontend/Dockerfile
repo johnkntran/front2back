@@ -3,7 +3,7 @@ FROM node:22.18.0-bookworm-slim
 WORKDIR /code
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git curl vim \
+    && apt-get install -y --no-install-recommends wget git curl vim \
     && apt-get install -y --reinstall procps
 
 RUN --mount=type=secret,id=env,target=/code/.env \
@@ -18,8 +18,7 @@ RUN claude --version
 RUN echo 'alias cc="claude --permission-mode acceptEdits --allowedTools Tool Bash Edit Glob Grep LS MultiEdit NotebookEdit NotebookRead Read Task TodoWrite WebFetch WebSearch Write -p"' >> ~/.bashrc
 RUN mkdir ~/.codex && echo 'preferred_auth_method = "apikey"' >> ~/.codex/config.toml
 
-COPY .env /code
-COPY ./frontend /code
+COPY .env /code/.env
 
 EXPOSE 3000
 

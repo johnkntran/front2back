@@ -1,8 +1,8 @@
-FROM node:22.18.0-bookworm-slim
+FROM node:22.20.0-trixie-slim
 
 WORKDIR /code
 
-RUN apt-get update \
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get install -y --no-install-recommends wget git curl vim \
     && apt-get install -y --reinstall procps
 
@@ -17,6 +17,7 @@ RUN npm install -g @anthropic-ai/claude-code
 RUN claude --version
 RUN echo 'alias cc="claude --permission-mode acceptEdits --allowedTools Tool Bash Edit Glob Grep LS MultiEdit NotebookEdit NotebookRead Read Task TodoWrite WebFetch WebSearch Write -p"' >> ~/.bashrc
 RUN mkdir ~/.codex && echo 'preferred_auth_method = "apikey"' >> ~/.codex/config.toml
+RUN npm install -g @google/gemini-cli
 
 COPY .env /code/.env
 

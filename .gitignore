@@ -357,5 +357,8 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# MacOS
-.DS_Store
+# Mac
+**/.DS_Store
+
+# Aider
+.aider.*

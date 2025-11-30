@@ -1,0 +1,21 @@
+{
+  "name": "Front2Back (Frontend)",
+  "dockerComposeFile": ["../../docker-compose.yml"],
+  "service": "frontend",
+  "workspaceFolder": "/code",
+  "forwardPorts": [3000],
+  "shutdownAction": "none",
+  "onCreateCommand": "git config --global user.name $GIT_USERNAME && git config --global user.email $GIT_EMAIL",
+  "postCreateCommand": "printenv",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Vue.volar",
+        "anthropic.claude-code",
+        "openai.chatgpt",
+        "google.gemini-cli-vscode-ide-companion"
+      ],
+      "settings": {}
+    }
+  }
+}

@@ -24,9 +24,15 @@ RUN npm install -g @anthropic-ai/claude-code
 RUN claude --version
 RUN echo 'alias cc="claude --permission-mode acceptEdits --allowedTools Tool Bash Edit Glob Grep LS MultiEdit NotebookEdit NotebookRead Read Task TodoWrite WebFetch WebSearch Write -p"' >> ~/.bashrc
 RUN mkdir ~/.codex && echo 'preferred_auth_method = "apikey"' >> ~/.codex/config.toml
+RUN npm install -g @google/gemini-cli
 
 COPY ./backend/requirements.txt /code
 RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+
+COPY ./backend/pyproject.toml /code
+RUN uv sync
+RUN uv tool install --force --python python3.12 --with pip aider-chat@latest
+RUN export PATH="/root/.local/bin:$PATH"
 
 COPY .env /code/.env
 
